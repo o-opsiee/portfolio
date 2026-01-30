@@ -1,0 +1,396 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+
+
+:root {
+  --pg-clr : #f5f0e6;
+  --txt-clr : #2b2b2b;
+  --brdr-clr : #faf8f3;
+  --lnk-clr : #4A2C2A;
+  --ttl-fnt : 'Cinzel';
+  --fnt :'Times New Roman', Times, serif;
+}
+
+body{
+  background-color: var(--brdr-clr);
+  color: var(--txt-clr);
+}
+
+header{
+  background-color: var(--pg-clr);
+  border: 0.5rem solid var(--brdr-clr);
+  text-align: center;
+}
+
+.gzt{
+  font-family: var(--ttl-fnt), var(--fnt);
+  font-size: 2.3rem;
+  margin-bottom: 0%;
+  padding-bottom: 0%;
+  font-weight: 900;
+}
+
+.dis{
+  font-family:'Times New Roman', Times, serif;
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+nav{
+  background-color: var(--txt-clr);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#date, nav a{
+  color: var(--brdr-clr);
+  font-size: 0.7rem;
+  font-family: var(--ttl-fnt), var(--fnt);
+  text-decoration: none;
+}
+
+#who-am-i{
+  background-color: var(--pg-clr);
+  border: 0.5rem solid var(--brdr-clr);
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas: 'headline pic'
+  'i1 i1'
+  'i2 i2';
+}
+
+.headline{
+  grid-area: headline;
+}
+
+.pic{
+  grid-area: pic;
+}
+
+.i1{
+  grid-area: i1;
+}
+
+.i2{
+  grid-area: i2;
+}
+
+.headline pre{
+  font-size: 89%;
+  font-weight: 800;
+  font-family: var(--fnt);
+}
+
+.pic img{
+  width: 100%;
+  height: 80%;
+}
+
+.i{
+  font-size: 160%;
+}
+
+#projects-skills{
+  background-color: var(--pg-clr);
+  border: 0.5rem solid var(--brdr-clr);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills pre{
+  font-family: var(--fnt);
+  font-size: 1rem;
+}
+
+.skills pre span{
+  font-family: var(--ttl-fnt);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.project1 img, .project2 img{
+  width: 100%;
+}
+
+.project1 a, .project2 a{
+  text-align: center;
+  color: var(--txt-clr);
+  font-family: var(--fnt);
+  font-size: 1.2rem;
+}
+
+.more{
+  background-color: var(--brdr-clr);
+  border-radius: 80%;
+}
+
+.more pre{
+  font-family: var(--fnt);
+  font-size: 1.7rem;
+  color: var(--txt-clr);
+}
+
+.more a{
+  text-decoration: none;
+}
+
+footer{
+  background-color: var(--pg-clr);
+  border: 0.5rem solid var(--brdr-clr);
+}
+
+.msg pre{
+  font-family: var(--fnt);
+  color: var(--txt-clr);
+  font-size: 1rem;
+}
+
+.msg q{
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-style: italic;
+}
+
+.profiles a{
+  color: var(--txt-clr);
+  font-size: 1.5rem;
+  text-decoration: none;
+  font-family: var(--fnt);
+}
+
+ul span{
+  font-size: 1.25rem;
+  color: var(--txt-clr);
+  font-family: var(--fnt);
+}
+
+@media  screen and (max-width: 390px) {
+  .headline pre{
+    font-size: 1rem;
+  }
+
+  .skills pre{
+    font-size: 0.85rem;
+  }
+
+  .msg q{
+    font-size: 1.25rem;
+  }
+  ul span{
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .gzt{
+    font-size: 3rem;
+  }
+
+  nav{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 'date . . who-am-i projects get-in-touch';
+  }
+
+  .date{
+    grid-area: date;
+  }
+
+  .who-am-i{
+    grid-area: who-am-i;
+  }
+
+  .projects{
+    grid-area: projects;
+  }
+
+  .get-in-touch{
+    grid-area: get-in-touch;
+  }
+
+  .headline pre{
+    font-size: 2.25rem;
+  }
+
+  #who-am-i{
+    grid-template-columns: 60% 35%;
+    grid-template-areas: 'headline pic'
+    'i1 pic'
+    'i2 pic';
+}
+
+.headline{
+  grid-area: headline;
+}
+
+.pic{
+  grid-area: pic;
+}
+
+.i1{
+  grid-area: i1;
+}
+
+.i2{
+  grid-area: i2;
+}
+
+.pic img{
+  height: 100%;
+}
+
+.skills{
+  width: 100%;
+}
+
+#get-in-touch{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 'msg profiles';
+}
+
+.msg{
+  grid-area: msg;
+}
+
+.profiles{
+  grid-area: profiles;
+}
+
+.profiles{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+}
+}
+
+@media screen and (min-width: 1024px ) {
+  .gzt{
+    font-size: 500%;
+  }
+
+  .dis{
+    font-size: 1rem;
+  }
+
+  #date, nav a{
+    font-size: 1rem;
+  }
+
+  #who-am-i{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: 'headline headline pic'
+                                  'i1 i2 pic';
+  }
+
+  .headline pre{
+    font-size: 4rem;
+  }
+
+  .i1, .i2{
+    font-size: 1.5rem;
+  }
+
+  .pic img{
+    height: 80%;
+    transform: translateY(10%);
+  }
+
+  #projects-skills{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'skills project1'
+                                  'more project2';
+  }
+
+  .skills{
+    grid-area: skills;
+  }
+
+  .project1{
+    grid-area: project1;
+  }
+
+  .project2{
+    grid-area: project2;
+  }
+
+  .more{
+    grid-area: more;
+  }
+
+  .skills pre{
+    font-size: 1.5rem;
+  }
+
+  .skills pre span{
+    font-size: 2rem;
+  }
+
+  .more a{
+    text-align: center;
+  }
+
+  .more{
+    width: 50%;
+    border-radius: 0%;
+  }
+
+  .msg pre{
+    font-size: 1.5rem;
+  }
+
+  .msg q{
+    font-size: 2rem;
+  }
+
+  .profiles a{
+    font-size: 2rem;
+  }
+
+  .profiles li span{
+    font-size: 1.6rem;
+  }
+
+  .profiles li{
+    margin: 1rem;
+  }
+
+  @keyframes line {
+      0%{
+        text-decoration: none;
+      }
+      5%{
+        text-decoration: underline 0.1rem;
+      }
+  }
+
+  .profiles a:hover{
+    animation: line 3s ease-out infinite;
+  }
+  
+  #who-am-i img, #projects-skills img {
+    color: #000; /* or whatever your normal text color is */
+    filter: grayscale(100%) blur(1px);
+    transition: filter 0.3s ease, color 0.3s ease;
+  }
+
+  #who-am-i img:hover, #projects-skills img:hover{
+    filter: none; /* removes grayscale + blur */
+    color: #000;  /* stays normal black or your chosen color */
+  }
+
+}
+
+
+
+
+
